@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <!-- allow use of constants in test code -->
+    <suppress checks="MagicNumber" files="Test.*.java|Field.*.java"/>
+    
+    <!-- remove superfluous errors in Checks unit tests due to checked
+         Java files being in the regression directory -->
+    <suppress checks="PackageDeclaration" files="ChecksTest.java"/>
+</suppressions>
