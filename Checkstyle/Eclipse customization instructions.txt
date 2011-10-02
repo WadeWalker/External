@@ -1,0 +1,6 @@
+- Install Checkstyle 5.3. or later in Eclipse
+- cd to eclipse\plugins\net.sf.eclipsecs.checkstyle_<version>
+- Copy Checks.jar into this directory
+- Edit META-INF/MANIFEST.MF
+  - Add ",name.wadewalker.checks" to the end of the Export-Package block
+  - Add ",Checks.jar" to the end of the Bundle-ClassPath block
