@@ -11,6 +11,7 @@
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
 		<property name="severity" value="warning"/>
+        <property name="fileExtensions" value=".java,.xml,.c,.cpp"/>
     </module>
 
     <module name="TreeWalker">
