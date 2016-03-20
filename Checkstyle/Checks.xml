@@ -58,10 +58,15 @@
        </module>
 
 		<!-- whitespace checks -->
-        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceAfter">
+            <property name="tokens" value="INC, DEC, UNARY_MINUS, UNARY_PLUS, BNOT, LNOT, DOT, INDEX_OP"/>
+            <property name="allowLineBreaks" value="false"/>
+        </module>
         <module name="NoWhitespaceBefore"/>
         <module name="ParenPad">
-            <property name="tokens" value="CTOR_CALL, METHOD_CALL, SUPER_CTOR_CALL"/>
+            <!--  had to remove METHOD_CALL for Checkstyle 6.16 because it thinks the first part of ((type)var).method() is a method call -->
+            <!-- property name="tokens" value="CTOR_CALL, METHOD_CALL, SUPER_CTOR_CALL"/-->
+            <property name="tokens" value="CTOR_CALL, SUPER_CTOR_CALL"/>
             <property name="option" value="space"/>
         </module>
         <module name="TypecastParenPad"/>
